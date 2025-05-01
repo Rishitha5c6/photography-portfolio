@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | All Works</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body 
+        { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f3f3f3; 
+        }
+        .container3 
+        { 
+            position: relative; 
+            display: inline-block; 
+            margin: 50px; 
+            padding: 20px; 
+        }
+        .background-text 
+        { 
+            color: transparent; 
+            -webkit-text-stroke: 1px #d9d9d9; 
+            font-size: 50px; 
+            font-weight: bold; 
+        }
+        .overlay-text 
+        { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            color: #8e8e8e; 
+            font-size: 48px; 
+            font-weight: bold; 
+        }
+
+        .container4
+        { 
+            display: flex; 
+        }
+        .nav 
+        { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            position: relative; 
+            padding: 20px; 
+            gap: 20px; 
+        }
+        .nav-item 
+        { 
+            color: #888; 
+            font-size: 16px; 
+            cursor: pointer; 
+            writing-mode: vertical-rl; 
+            text-orientation: mixed; 
+            transform: rotate(180deg);
+         }
+        .nav-item:hover::after 
+        { 
+            content: ""; 
+            position: absolute; 
+            left: -5px; 
+            top: 0; 
+            height: 100%; 
+            width: 3px; 
+            background-color: #f90; 
+        }
+        .gallery-container 
+        { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr 2fr; 
+            gap: 15px; 
+        }
+        .gallery-item 
+        { 
+            position: relative; 
+            overflow: hidden;
+         }
+        .gallery-item img 
+        { 
+            width: 100%; 
+            height: 59vh; 
+            object-fit: cover; 
+            transition: transform 0.3s ease; 
+        }
+
+        .gallery-item::after 
+        { 
+            content: ""; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(169, 169, 169, 0.5); 
+            opacity: 0; 
+            transition: opacity 0.3s ease; 
+        }
+
+        .gallery-item:hover img
+        { 
+            transform: scale(1.05); 
+        }
+        .gallery-item:hover::after 
+        { 
+            opacity: 1; 
+        }
+
+        .hidden 
+        { 
+            display: none; 
+        }
+
+        #shortfilms:checked ~ .gallery-container .gallery-item:not(.shortfilms),
+        #all:checked ~ .gallery-container .gallery-item 
+        { 
+            display: block; 
+        }
+
+        #shortfilms:checked ~ .gallery-container .gallery-item:not(.shortfilms),
+        #professional:checked ~ .gallery-container .gallery-item:not(.professional),
+        #commercial:checked ~ .gallery-container .gallery-item:not(.commercial) 
+        { 
+            display: none; 
+        }
+
+        input[type="radio"] 
+        { 
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img width="26px" height="27px"
+                        src="https://photography-portfolio07.netlify.app/assets/img/icons/logo-icon.png" alt="Logo">
+                    <span class="foto">Foto</span><span class="gency">gency</span>
+                </a>
+            </div>
+            <a class="contact-now" href="/blog#contact">CONTACT NOW</a>
+            <div class="position-absolute absolute-centered z-index--1">
+                <h1 class="outlined-title port">Gallery</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html" >Home</a></li>
+                    <li><a href="./portfolio.html" >Portfolio</a></li>
+                    <li><a href="./gallery.html"class="active">Gallery</a></li>
+                    <li><a href="./exhibitions.html">Exhibitions</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            
+            
+    
+    <div class="container3">
+        <div class="background-text">All Works</div>
+        <div class="overlay-text">Gallery</div>
+    </div>
+    <div class="container4">
+        <div class="nav">
+            <label class="nav-item active" for="all">All</label>
+            <label class="nav-item" for="shortfilms">Short films</label>
+            <label class="nav-item" for="professional">Professional</label>
+            <label class="nav-item" for="commercial">Commercial</label>
+        </div>
+
+        <input type="radio" id="all" name="filter" checked>
+        <input type="radio" id="shortfilms" name="filter">
+        <input type="radio" id="professional" name="filter">
+        <input type="radio" id="commercial" name="filter">
+
+        <div class="gallery-container">
+            <div class="gallery-item shortfilms">
+                <img src="rabbit.png">
+            </div>
+            <div class="gallery-item shortfilms">
+                <img src="2.png">
+            </div>
+            <div class="gallery-item shortfilms">
+                <img src="single.png">
+            </div>
+            <div class="gallery-item professional">
+                <img src="4.png">
+            </div>
+            <div class="gallery-item professional">
+                <img src="6.png">
+            </div>
+            <div class="gallery-item professional">
+                <img src="bag.png">
+            </div>
+            <div class="gallery-item commercial">
+                <img src="walk.jpg">
+            </div>
+            <div class="gallery-item commercial">
+                <img src="red.png">
+            </div>
+            <div class="gallery-item commercial">
+                <img src="hang.png">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer1">
+            <div class="footer-container">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <img src="https://photography-portfolio07.netlify.app/assets/img/icons/dark-logo-icon.png"
+                                alt="error">
+                            <span><strong>Foto</strong>gency</span>
+                        </div>
+                        <div class="contact-info">
+                            <p><i class="fa-solid fa-location-dot"></i> 2109 WS 09 Oxford Rd #127 ParkVilla Hills, MI 48334
+                            </p>
+                            <p><i class="fa-solid fa-phone"></i> +88 019 76456893</p>
+                            <p><i class="fa-solid fa-envelope"></i> scrumbledegg@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                        <div class="newsletter">
+                            <input type="email" placeholder="Email" />
+                            <button>
+                                <span>&rarr;</span>
+                            </button>
+                        </div>
+                        <div class="social-links">
+                            <a href="#">Facebook</a>
+                            <a href="#">Flickr</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Youtube</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="bottom-items">
+                <p>All rights Reserved © Your Company, 2022</p>
+                <p>Made with 🧡 by <span class="highlight">Sudeep Acharjee</span></p>
+           </div> 
+           </div>
+        </div>
+    
+    </footer>
+    
+</body>
+</html>

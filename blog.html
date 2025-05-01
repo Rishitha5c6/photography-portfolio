@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>blog</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px;
+    background: transparent;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.foto {
+    font-weight: 800;
+    color: black;
+    font-size: 24px;
+    margin-left: 0.5rem;
+    font-size: 1.728rem;
+}
+
+.gency {
+    font-weight: 100;
+    font-size: 1.728rem;
+    color: black;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
+
+.contact-now {
+    font-size: 17px;
+    font-weight: bolder;
+    color: #F59E0B; 
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    right: 160px; 
+    top: 25px;
+}
+
+.contact-now:hover{
+    text-decoration: underline;
+    transition: ease-out;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    position: absolute;
+    right: 73px;
+    top: 24px;
+    text-align: right;
+    z-index: 10;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+    transition: color 0.3s, font-weight 0.3s; 
+}
+.menu ul li a:hover {
+    color: black;
+    font-weight: 100;
+}
+
+.menu ul li a.active {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+}
+
+.menu ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 110%; 
+    top: 50%; 
+    width: 100%; 
+    height: 2px; 
+    background-color: #F59E0B; 
+    transform: translateY(-50%); 
+    font-weight: bolder;
+}
+
+
+
+.hero {
+    position: relative;
+    text-align: left;
+    /* padding: 80px 50px; */
+    /* margin: 28.8px 0px 0px; */
+    margin: 0px 20.4px ;
+    padding: 0px 48px;
+    top: 25px;
+}
+
+.portfolio-title {
+    font-size: 3.5rem ;
+    font-weight: 800;
+    color: #8e8e8e;
+    z-index: 2;
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative;
+    margin-top: -3px;
+    margin-bottom: 0.5rem;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+}
+.outlined-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    opacity: 1;
+    -webkit-text-stroke: 1px #8e8e8e;
+    -webkit-text-stroke-width: 0.3px;
+    display: block;
+    z-index: -1;
+    line-height: 1;
+    margin-top: -1.5rem;
+    letter-spacing: 2px;
+}
+.port{
+    font-weight: bolder;
+    position: absolute;
+    top:20%;
+    left: 80%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: -1 ;
+    box-sizing: border;
+    color: #fff;
+    text-transform:uppercase;
+    font-size: 80px;
+}
+
+  body {
+            font-family: Arial, sans-serif;
+            
+            justify-content: center;
+            align-items: center;
+            height: 82vh;
+            background-color: #fff;
+        }
+        .contact-container {
+            width: 90%;
+            position: relative;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 80px;
+            margin-bottom: 100px;
+        }
+        
+        
+        .left,
+        .right {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+           
+        }
+
+        .left input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .right textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid gray;
+            outline: none;
+            font-size: 16px;
+            resize: vertical; 
+            height: 197px; 
+        }
+
+        .right input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+            font-size: 16px;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="date"] {
+            position: relative;
+            color: transparent;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+            font-size: 16px;
+        }
+
+        input[type="date"]::before {
+            content: "Desired Date";
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 16px;
+            pointer-events: none;
+        }
+
+        input[type="date"]:focus,
+        input[type="date"]:valid {
+            color: black;
+        }
+
+        input[type="date"]:focus::before,
+        input[type="date"]:valid::before {
+            display: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+
+        .submit-btn button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: orange;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .submit-btn button::after {
+            content: " →";
+            margin-left: 10px;
+            font-weight: 800;
+            color: #F59300;
+            transition: margin-left 0.3s ease;
+        }
+
+        .submit-btn button:hover::after {
+            margin-left: 15px;
+        }
+
+        .submit-btn button:hover {
+            border-bottom: 2px solid orange;
+        }
+
+        .contact-title {
+    font-size: 4.2rem ;
+    font-weight: 800;
+    color: #8e8e8e;
+    z-index: 2;
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative;
+    left: 20px;
+    margin-top: -3px;
+    margin-bottom: 0.5rem;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+}
+.outline{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    opacity: 1;
+    -webkit-text-stroke: 1px #8e8e8e;
+    -webkit-text-stroke-width: 0.3px;
+    display: block;
+    z-index: -1;
+    line-height: 1;
+    margin-top: -1.5rem;
+    letter-spacing: 2px;
+}
+.heading{
+    margin-left: 35%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.left input:hover,
+.right input:hover {
+    border-bottom: 1px solid darkorange;
+}
+
+.left input,
+.right input {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.left input::placeholder,
+.right input::placeholder {
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.left input:focus::placeholder,
+.right input:focus::placeholder {
+    font-size: 12px;
+    top: 5px;
+    transform: translateY(0);
+}
+
+.right textarea {
+    border: 1px solid gray;
+    resize: vertical;
+}
+
+
+    .blog-section {
+      display: grid;
+      grid-template-columns: repeat(3, 3fr);
+      margin-top: 50px;
+      margin-left: 60px;
+      margin-right: 60px;
+      gap: 30px;
+    }
+
+    .blog-para {
+      color: #8E8E8E;
+      margin-top: 0px;
+      font-size: 15px;
+      margin-left: 6px;
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI";
+
+    }
+
+    .blog-para1 {
+      color: white;
+      margin-left: 198px;
+      font-size: 17px;
+      margin-top: 0px;
+      width: 130px;
+      background-color: rgba(255, 166, 0, 0.53);
+      font-family: "Open Sans", -apple-system, BlinkM;
+      text-align: center;
+      height: 30px;
+
+    }
+
+    .blog-img1 {
+      margin-bottom: 0px;
+      gap: 0px;
+
+    }
+
+    .blog-desc {
+      display: flex;
+    }
+
+    .circle {
+      color: orange;
+
+    }
+
+    .blog-heading {
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .blog-dummy-section {
+      display: grid;
+      grid-template-columns: repeat(3, 3fr);
+      margin-left: 60px;
+    }
+
+    .side-heading {
+      color: #8E8E8E;
+      font-weight: 700;
+
+    }
+
+    .by {
+      color: rgb(196, 196, 196);
+      
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .c1 {
+      color: rgba(128, 128, 128, 0.892);
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-weight: 700;
+    }
+
+    .p1 {
+      color: rgba(91, 112, 117, 0.914);
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 16px;
+      margin-right: 50px;
+
+    }
+
+    .blog-article {
+      color: rgb(245, 147, 0);
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 30px;
+    }
+
+    .blog-article:hover {
+      text-decoration: underline;
+      transition: transform 0.3s ease-in-out;
+    }
+    .blog-arrow1{
+      width: 35px;
+      height: 20px;
+    
+      margin-left: 10px;
+      margin-top: 33px;
+      
+    }
+    .blog-button1{
+      display: inline-flex;
+      gap: 10px;
+      border:2px solid transparent;
+      cursor: pointer;
+      transition: border 0.3 ease;
+      
+      box-sizing: border-box;
+      height: fit-content;
+      width: fit-content;
+    }
+    .blog-button1:active{
+      border: 4px solid lightblue;
+      border-radius: 10px;
+     
+    }
+    
+    .blog-button2{
+      display: inline-flex;
+      gap: 10px;
+      border:2px solid transparent;
+      cursor: pointer;
+      transition: border 0.3 ease;
+      
+      box-sizing: border-box;
+      height: fit-content;
+      width: fit-content;
+    }
+    .blog-button2:active{
+      border: 4px solid lightblue;
+      border-radius: 10px;
+     
+    }
+    .blog-button3{
+      display: inline-flex;
+      gap: 10px;
+      border:2px solid transparent;
+      cursor: pointer;
+      transition: border 0.3 ease;
+      box-sizing: border-box;
+      height: fit-content;
+      width: fit-content;
+    }
+    .blog-button3:active{
+      border: 4px solid lightblue;
+      border-radius: 10px;
+    }
+    .blog-para-article:hover{
+      text-decoration: underline;
+      color:#F59300;
+
+    }
+
+    footer {
+    font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    color: #8E8E8E;
+    margin-top: 100px;
+    padding: 0;
+}
+
+.footer1 {
+    background-color: #1b1b1b;
+    color: #5b7075;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 75px 48px;
+    margin: 0px 20.4px;
+    color: #8E8E8E;
+
+    
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+    color: #8E8E8E;
+
+}
+
+.footer-left{
+    font-size: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    height: auto;
+    margin-bottom: 7%;
+
+}
+
+.footer-logo span {
+    color: #fff;
+    font-size: 24px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 8px 16px;
+}
+
+.footer-logo img {
+    width: 25px;
+    height: 26px;
+    margin-right: 5px;
+    margin-left: 20%;
+}
+
+.contact-info i {
+    color: #8E8E8E;
+}
+
+.footer-right h3 {
+    color: #fff;
+    font-size: 19.2px;
+    margin-bottom: 0px 0px 8px;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.newsletter input {
+width: 100%;
+padding: 8px;
+border: none;
+border-bottom: 1px solid #444;
+background-color: transparent;
+color: #fff;
+outline: none;
+}
+
+.newsletter input::placeholder {
+font-size: 16px; 
+color: #8E8E8E; 
+}
+
+
+.newsletter button {
+    background: none;
+    border: none;
+    color: #ffa500;
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+    right: 8%;
+    font-weight: 200;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.bottom-items {
+    
+    border-top: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    background-color: #000;
+    padding: 25px 70px;
+    color: #e5e5e5;
+}
+
+
+
+.footer-bottom .highlight {
+    color: #ffa500;
+}
+</style>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <a href="/">
+                <img width="26px" height="27px"
+                    src="https://photography-portfolio07.netlify.app/assets/img/icons/logo-icon.png" alt="Logo">
+                <span class="foto">Foto</span><span class="gency">gency</span>
+            </a>
+        </div>
+        <a class="contact-now" href="/blog#contact">CONTACT NOW</a>
+        <div class="position-absolute absolute-centered z-index--1">
+            <h1 class="outlined-title port">BLOG</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./portfolio.html" >Portfolio</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./exhibitions.html">Exhibitions</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./blog.html" class="active">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div>
+    <header class="hero">
+        <h1 class="portfolio-title">BLOG</h1>
+        <h1 class="outlined-title">Recent update</h1>
+    </header>
+</div>
+  <div class="blog-section">
+    <div class="blog-img1">
+      <img src="https://photography-portfolio07.netlify.app/assets/img/blogs/img1.png">
+      <div class="blog-desc">
+        <svg class="circle" style="width:15px;height:18px" aria-hidden="true" focusable="false" data-prefix="fas"
+          data-icon="circle-dot" role="img" xmlns="http://www.w3.org/2000/svg" <svg
+          class="svg-inline--fa fa-circle-dot text-warning" aria-hidden="true" focusable="false" data-prefix="fas"
+          data-icon="circle-dot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+          <path fill="currentColor"
+            d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 352C309 352 352 309 352 256C352 202.1 309 160 256 160C202.1 160 160 202.1 160 256C160 309 202.1 352 256 352z">
+          </path>
+        </svg>
+        <path fill="currentColor"
+          d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 352C309 352 352 309 352 256C352 202.1 309 160 256 160C202.1 160 160 202.1 160 256C160 309 202.1 352 256 352z"
+          style="font-size:10px"></path></svg>
+        <p class="blog-para" style="width:100px">6min read</p>
+        <p class="blog-para1">color and light</p>
+      </div>
+    </div>
+
+    <div class="img2">
+      <img src="https://photography-portfolio07.netlify.app/assets/img/blogs/img2.png">
+      <div class="blog-desc">
+        <svg class="circle" style="width:15px;height:18px" aria-hidden="true" focusable="false" data-prefix="fas"
+          data-icon="circle-dot" role="img" xmlns="http://www.w3.org/2000/svg" <svg
+          class="svg-inline--fa fa-circle-dot text-warning" aria-hidden="true" focusable="false" data-prefix="fas"
+          data-icon="circle-dot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+          <path fill="currentColor"
+            d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 352C309 352 352 309 352 256C352 202.1 309 160 256 160C202.1 160 160 202.1 160 256C160 309 202.1 352 256 352z">
+          </path>
+        </svg>
+        <path fill="currentColor"
+          d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 352C309 352 352 309 352 256C352 202.1 309 160 256 160C202.1 160 160 202.1 160 256C160 309 202.1 352 256 352z"
+          style="font-size:10px"></path></svg>
+        <p class="blog-para" style="width:100px">6min read</p>
+        <p class="blog-para1">color and light</p>
+      </div>
+    </div>
+    <div class="img3">
+      <img src="	https://photography-portfolio07.netlify.app/assets/img/blogs/img3.png" >
+      <div class="blog-desc">
+        <svg class="circle" style="width:15px;height:18px" aria-hidden="true" focusable="false" data-prefix="fas"
+          data-icon="circle-dot" role="img" xmlns="http://www.w3.org/2000/svg" <svg
+          class="svg-inline--fa fa-circle-dot text-warning" aria-hidden="true" focusable="false" data-prefix="fas"
+          data-icon="circle-dot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+          <path fill="currentColor"
+            d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 352C309 352 352 309 352 256C352 202.1 309 160 256 160C202.1 160 160 202.1 160 256C160 309 202.1 352 256 352z">
+          </path>
+        </svg>
+        <path fill="currentColor"
+          d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 352C309 352 352 309 352 256C352 202.1 309 160 256 160C202.1 160 160 202.1 160 256C160 309 202.1 352 256 352z"
+          style="font-size:10px"></path></svg>
+        <p class="blog-para" style="width:100px">6min read</p>
+        <p class="blog-para1">color and light</p>
+      </div>
+    </div>
+  </div>
+  <div class="blog-dummy-section">
+    <div class="blog-dummy-1">
+      <h3 class="blog-heading">Simply dummy text of the printing and <br>typesetting.</h3>
+      <div class="side-heading">
+        
+      </div>
+      <p class="by">By - <span class="c1">Frederico giuspam</span></p>
+      <p class="p1">There are many variations of passages of
+        Loreum Ipsum available, but the majority have suffered alteration in some
+      </p>
+      <div class="blog-button1">
+        <div class="blog-article">Read full article   </div>
+          <img src="https://photography-portfolio07.netlify.app/assets/img/icons/long-arrow.png" class="blog-arrow1">
+      </div>
+    </div>
+    <div class="blog-dummy-1">
+      <h3 class="blog-heading">Simply dummy text of the printing and<br> typesetting.</h3>
+      <p class="by">By - <span class="c1">Frederico giuspam</span></p>
+      <p class="p1">There are many variations of passages of
+        Loreum Ipsum available, but the majority have suffered alteration in some
+      </p>
+      <div class="blog-button2">
+      <div class="blog-article">Read full article</div>
+       
+          <img src="https://photography-portfolio07.netlify.app/assets/img/icons/long-arrow.png" class="blog-arrow1">
+      
+    </div>
+    </div>
+    <div class="blog-dummy-1">
+      <h3 class="blog-heading">Simply dummy text of the printing and <br>typesetting.</h3>
+      <p class="by">By - <span class="c1">Frederico giuspam</span></p>
+
+      <p class="p1">There are many variations of passages of
+        Loreum Ipsum available, but the majority have suffered alteration in some
+      </p>
+      <div class="blog-button3">
+      <div class="blog-article">Read full article</div>
+        <img src="https://photography-portfolio07.netlify.app/assets/img/icons/long-arrow.png" class="blog-arrow1">
+      
+    </div>
+    </div>
+    
+  </div>
+  <div class="blog-para-button">
+  <div class="blog-para-article">
+  <p class="bolg-end"  style="font-size: 20px;color: orange;font-weight: bold;text-align: center;
+                              margin-top: 40px;margin-bottom: 30px">See all</p></div></div>
+     <div class="contact-container">
+      <div class="heading">
+      <h1 class="contact-title">CONTACT </h1>
+      <p class="outline">Get in Touch</p>
+     </div>
+      <form>
+          <div class="left">
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="tel" name="phone" placeholder="Phone number" required>
+              <input type="text" name="location" placeholder="Desired location" required>
+              <input type="date" name="date" required>
+          </div>
+
+          <div class="right">
+              <textarea name="message" placeholder="Message" required></textarea>
+              <input type="text" name="hear-about" placeholder="How did you hear about us?" required>
+          </div>
+
+          <div class="submit-btn">
+              <button type="submit">SUBMIT</button>
+          </div>
+      </form>
+  </div> 
+  <footer>
+    <div class="footer1">
+        <div class="footer-container">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="https://photography-portfolio07.netlify.app/assets/img/icons/dark-logo-icon.png"
+                            alt="error">
+                        <span><strong>Foto</strong>gency</span>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fa-solid fa-location-dot"></i> 2109 WS 09 Oxford Rd #127 ParkVilla Hills, MI 48334
+                        </p>
+                        <p><i class="fa-solid fa-phone"></i> +88 019 76456893</p>
+                        <p><i class="fa-solid fa-envelope"></i> scrumbledegg@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Email" />
+                        <button>
+                            <span>&rarr;</span>
+                        </button>
+                    </div>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Flickr</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Youtube</a>
+                    </div>
+                </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="bottom-items">
+            <p>All rights Reserved © Your Company, 2022</p>
+            <p>Made with 🧡 by <span class="highlight">Sudeep Acharjee</span></p>
+       </div> 
+       </div>
+    </div>
+
+</footer>                       
+</body>
+

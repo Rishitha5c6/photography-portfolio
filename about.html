@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogency - About Our Team</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+ <style>
+    * {
+       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+    background: #fff;
+    }
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent;
+    }
+    .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+    }
+    .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+    }
+    .logo img {
+    max-width: 100%;
+    height: auto;
+    }
+    .foto {
+    font-weight: 800;
+    color: black;
+    font-size: 24px;
+    margin-left: 0.5rem;
+    font-size: 1.728rem;
+    }
+    .gency {
+    font-weight: 100;
+    font-size: 1.728rem;
+    color: black;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+    .contact-now {
+    font-size: 17px;
+    font-weight: bolder;
+    color: #F59E0B; 
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    right: 160px; 
+    top: 28px;
+    }
+    .contact-now:hover{
+    text-decoration: underline;
+    transition: ease-out;
+    }
+    .menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    position: absolute;
+    right: 73px;
+    top: 28px;
+    text-align: right;
+    z-index: 10;
+    }
+    .menu ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+    transition: color 0.3s, font-weight 0.3s; 
+    }
+   .menu ul li a:hover {
+    color: black;
+    font-weight: 100;
+    }
+
+   .menu ul li a.active {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+   }
+
+  .menu ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 101%; 
+    top: 50%; 
+    width: 30px; 
+    height: 2px; 
+    background-color: #F59E0B; 
+    transform: translateY(-50%); 
+    font-weight: bolder;
+   }
+  .hero {
+    position: relative;
+    text-align: left;
+    margin: 0px 20.4px ;
+    padding: 0px 48px;
+    top: 25px;
+   }
+
+  .About-title {
+    font-size: 3.5rem ;
+    font-weight: 800;
+    color: #8e8e8e;
+    z-index: 2;
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+   }
+  .outlined-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    opacity: 1;
+    -webkit-text-stroke: 1px #8e8e8e;
+    -webkit-text-stroke-width: 0.3px;
+    display: block;
+    z-index: -1;
+    line-height: 1;
+    margin-top: -1.5rem;
+   }
+  .port{
+    font-weight: bolder;
+    position: absolute;
+    top:20%;
+    left: 80.5%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: -1 ;
+    box-sizing: border;
+    color: #fff;
+    text-transform:uppercase;
+    font-size: 80px;
+    }
+    .team {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    }
+    .team-member {
+            text-align: center;
+        }
+        .team-member img {
+            width: 25rem;
+            height: 24rem;
+            object-fit: cover;
+        }
+        .team-member h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        .team-member p {
+            color: #FFA500;
+        }
+        .social-icons a {
+            margin: 0 0.5rem;
+            color: #4A4A4A;
+        }
+        .social-icons a:hover {
+            color: #FFA500;
+        }
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+        .grid-cols-1 {
+            grid-template-columns: 1fr;
+        }
+        .md\\:grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .md\\:grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .text-center {
+            text-align: center ;
+        }
+     footer {
+            font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+            color: #8E8E8E;
+            margin-top: 100px;
+            padding: 0;
+        }
+
+        .footer1 {
+            background-color: #1b1b1b;
+            color: #5b7075;
+
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 75px 48px;
+            margin: 0px 20.4px;
+            color: #8E8E8E;
+
+
+        }
+
+        .footer-left,
+        .footer-right {
+            flex: 1;
+            color: #8E8E8E;
+
+        }
+
+        .footer-left {
+            font-size: 1rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            width: 10%;
+            height: auto;
+            margin-bottom: 7%;
+
+        }
+
+        .footer-logo span {
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 8px 16px;
+        }
+
+        .footer-logo img {
+            width: 25px;
+            height: 26px;
+            margin-right: 5px;
+            margin-left: 20%;
+        }
+
+        .contact-info i {
+            color: #8E8E8E;
+        }
+
+        .footer-right h3 {
+            color: #fff;
+            font-size: 19.2px;
+            margin-bottom: 0px 0px 8px;
+        }
+
+        .newsletter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .newsletter input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-bottom: 1px solid #444;
+            background-color: transparent;
+            color: #fff;
+            outline: none;
+        }
+
+        .newsletter input::placeholder {
+            font-size: 16px;
+            color: #8E8E8E;
+        }
+
+
+        .newsletter button {
+            background: none;
+            border: none;
+            color: #ffa500;
+            font-size: 40px;
+            cursor: pointer;
+            position: relative;
+            right: 8%;
+            font-weight: 200;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+        }
+
+        .bottom-items {
+
+            border-top: 1px solid #444;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            background-color: #000;
+            padding: 25px 70px;
+            color: #e5e5e5;
+        }
+
+
+
+        .footer-bottom .highlight {
+            color: #ffa500;
+        }
+</style>
+</head>
+
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <a href="/">
+                <img width="26px" height="27px"
+                    src="https://photography-portfolio07.netlify.app/assets/img/icons/logo-icon.png" alt="Logo">
+                <span class="foto">Foto</span><span class="gency">gency</span>
+            </a>
+        </div>
+        <a class="contact-now" href="/blog#contact">CONTACT NOW</a>
+        <div class="position-absolute absolute-centered z-index--1">
+            <h1 class="outlined-title port">ABOUT</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html" >Portfolio</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="exhibitions.html">Exhibitions</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div>
+    <header class="hero">
+        <h1 class="About-title">ABOUT</h1>
+        <h1 class="outlined-title">Our Team</h1>
+    </header>
+</div> 
+<div class="team">
+    <div class="team-member">
+        <img src="https://storage.googleapis.com/a1aa/image/R57WiPW89u6wuDigEIcG9UyQJIjQwrSVV60rjcLI0Ns.jpg" alt="Portrait of Michael Lurie">
+        <h3>Michael Lurie</h3>
+        <p>CEO</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="team-member">
+        <img src="https://storage.googleapis.com/a1aa/image/kfjQlpWF94HSL1sPDq3AH1Dn9_yR_uRVLtOUOvVKKWI.jpg" alt="Portrait of Jessica Wanda">
+        <h3>Jessica Wanda</h3>
+        <p>Art Director</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="team-member">
+        <img src="https://storage.googleapis.com/a1aa/image/x9N35TJ413MViFZ9Rc2AujGmSURwEHcNfnft0kh99iM.jpg" alt="Portrait of Roland Keith">
+        <h3>Roland Keith</h3>
+        <p>Cinematographer</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+<div class="team">
+    <div class="team-member">
+        <img src="https://storage.googleapis.com/a1aa/image/n1Er7XhNyPfeMETnolnvMlclN6M3eBRWqdxBE9xrhDY.jpg" alt="Portrait of Diane Givens">
+        <h3>Diane Givens</h3>
+        <p>Art Director</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    
+   <div class="team-member">
+            <img src="https://storage.googleapis.com/a1aa/image/2GWHhIRuStYH3ge3g4SDrO7VDA_c_UXdKqihNCRYVAY.jpg" alt="Portrait of  John Brown">
+            <h3> John Brown</h3>
+            <p>CEO</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+    </div>
+</div>
+<footer>
+        <div class="footer1">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="https://photography-portfolio07.netlify.app/assets/img/icons/dark-logo-icon.png"
+                            alt="error">
+                        <span><strong>Foto</strong>gency</span>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fa-solid fa-location-dot"></i> 2109 WS 09 Oxford Rd #127 ParkVilla Hills, MI 48334
+                        </p>
+                        <p><i class="fa-solid fa-phone"></i> +88 019 76456893</p>
+                        <p><i class="fa-solid fa-envelope"></i> scrumbledegg@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Email" />
+                        <button>
+                            <span>&rarr;</span>
+                        </button>
+                    </div>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Flickr</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Youtube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="bottom-items">
+                    <p>All rights Reserved © Your Company, 2022</p>
+                    <p>Made with 🧡 by <span class="highlight">Sudeep Acharjee</span></p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>
